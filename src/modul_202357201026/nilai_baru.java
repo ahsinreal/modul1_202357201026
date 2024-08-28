@@ -18,13 +18,17 @@ public class nilai_baru {
         int nilai_Baru = Integer.parseInt(JOptionPane.showInputDialog("masukkan nilai Baru "));
         data[baris][kolom] = nilai_Baru;
         
+        int total=0;
+        
         for(int x =0; x <data.length; x++){
             for(int y =0; y <data[x].length; y++){
+                if(y % 2==1){
                 System.out.print(data[x][y] + " ");
-                
+                total += data[x][y];
+                }
             }
             System.out.println("\n");
         }
-        
+        System.out.println("Total : "+ total);        
     }
 }
